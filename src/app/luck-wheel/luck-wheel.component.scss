@@ -1,0 +1,188 @@
+.luckwheel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  transition: all .4s;
+
+  .spinner {
+    background-color: #272947;
+    height: 100%;
+    min-width: 300px;
+    width: 35vw;
+    box-shadow: 5px 0 15px black;
+    z-index: 100;
+    transition: all 1s;
+    margin-left: -100%;
+
+    &.loaded {
+      margin-left: 0;
+    }
+
+    .header {
+      height: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 4vw;
+        text-shadow: 0 0 10px red;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .body {
+      height: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .win {
+        user-select: none;
+        height: 30vw;
+        width: 30vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: content-box;
+        transition: all 1s ease-in-out;
+        background-color: #455081;
+        border: 10px solid red;
+        opacity: 0;
+        position: absolute;
+        transform: scale(0) rotate(-360*5deg);
+
+        .prize {
+          transition: all 1s;
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &.done {
+        .spin {
+          transition: all 1s ease-in-out;
+          transform: rotate(calc(360*5deg)) scale(0);
+        }
+
+        .win {
+          transform: scale(1) rotate(0);
+          opacity: 1;
+        }
+      }
+
+      .spin {
+        user-select: none;
+        height: 30vw;
+        width: 30vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: white;
+        border: 10px solid white;
+        box-sizing: content-box;
+        transition: all 1s ease-in-out;
+
+        .center {
+          position: absolute;
+          width: 5vw;
+          height: 5vw;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: red;
+          box-shadow: 0 0 20px black;
+          border: 10px solid white;
+          border-radius: 50%;
+        }
+
+        .spin-element {
+          height: 15vw;
+          width: 15vw;
+          display: inline-block;
+          clip-path: polygon(50% 100%, 92% 0, 8% 0);
+          background-color: red;
+          transform-origin: bottom;
+          position: absolute;
+
+          &:nth-child(odd) {
+            background-color: #971111;
+          }
+
+          img {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    .footer {
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &.done {
+    .register {
+      margin-left: 0;
+    }
+  }
+
+  .register {
+    background-color: rgba(39, 41, 71, .8);
+    height: 100%;
+    min-width: 300px;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s;
+    margin-left: -200vw;
+
+    .header {
+      height: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 3vw;
+        text-shadow: 0 0 10px red;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .body {
+      height: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer {
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

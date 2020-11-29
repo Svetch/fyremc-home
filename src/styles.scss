@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #27293D;
+}
+html {
+  overflow:   scroll;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+main {
+  text-align: center;
+  position: relative;
+  transition: height .4s;
+}
+
+::-webkit-scrollbar {
+  transition: all .2s;
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #27293D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+}

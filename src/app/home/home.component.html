@@ -1,0 +1,75 @@
+<div #step1 class="wrapper">
+  <div #videoWrapper class="bg-video">
+    <!-- <app-ytvideo-player (ready)="showBgVideo($event)"></app-ytvideo-player> -->
+    <!-- <iframe #videobg (window:resize)="onResize($event)"
+      src="https://www.youtube.com/embed/VQYlvH0RcKc?playlist=VQYlvH0RcKc&mute=1&iv_load_policy=3&enablejsapi=1&disablekb=1&autoplay=1&controls=0&showinfo=0&rel=0&loop=1&wmode=transparent&origin=https://fyremc.hu&widgetid=1"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
+    <img src="./assets/trailer-start.png">
+    <div class="landing-desc">
+      <div class="title">
+        A LEGDURVÁBB<br>
+        <div class="red-text">MAGYAR MINECRAFT</div>
+        SZERVER
+      </div>
+      <div class="description">Játssz most! <a routerLink="/downloads" class="download">Letöltés</a></div>
+    </div>
+    <div class="daily">
+      <div class="num">Online: {{ daily }}</div>
+    </div>
+  </div>
+</div>
+<section #step2 class="steps">
+  <div class="container">
+    <h1>Új vagy? Segítünk!</h1>
+    <h3>Gyors útmutató az elejétől a játékig!</h3>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="fyre-step">
+          1
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="fyre-step">
+          2
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="fyre-step">
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section #step3 class="dialog step-{{step>2?2:1}}"
+  style="background-image: url('./assets/day_2020-05-17_18.05.23.png');">
+  <img src="./assets/rolix.png" alt="" class="skin bright">
+  <img src="./assets/nexuser.png" alt="" class="skin-2 flip">
+  <div class="dialog-box">
+    <div class="dialog-content step-1">
+      <h3 class="dialog-title">Szükséges lenne felszabadítani</h3>
+      <div class="dialog-description">Elemzések segítségével kell rávilágítani a személyre szabott látványtechnológiát.
+      </div>
+    </div>
+    <div class="dialog-content step-2">
+      <h3 class="dialog-title">Formállogikai alapon</h3>
+      <div class="dialog-description">Megpróbálom testreszabni a XXI. századi színvonalú munkacsoportot.</div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid social-bg" #step4>
+  <div class="socials-title">
+    <h1>
+      <fa-icon [icon]="faShare"></fa-icon> <span> Kövess minket vagy csatlakozz</span>
+    </h1>
+  </div>
+  <div class="container socials">
+    <div class="row">
+      <div class="col-12 col-md-3"><a href=""><img src="./assets/instagram.svg" alt=""></a></div>
+      <div class="col-12 col-md-3"><a href=""><img src="./assets/facebook.svg" alt=""></a></div>
+      <div class="col-12 col-md-3"><a href=""><img src="./assets/youtube.svg" alt="" class="yt"></a></div>
+      <div class="col-12 col-md-3 dc"><a href=""><img src="./assets/discord.svg" alt=""></a></div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

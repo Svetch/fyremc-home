@@ -1,0 +1,40 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-mainbg" role="navigation" style="margin-top: 2px;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="./assets/logo_text.png" height="60" class="d-inline-block align-top"
+            alt="Logo" loading="lazy"></a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <fa-icon [icon]="faBars" class="text-white"></fa-icon>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav col" style="padding:0;">
+          <li class="nav-item ml-lg-auto">
+            <a routerLink="/" class="nav-link" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">Kezdőlap</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/downloads" class="nav-link" routerLinkActive="active">Letöltés</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/server" class="nav-link" routerLinkActive="active">Segítség</a>
+          </li>
+          <li class="nav-item">
+            <a href="/fyreshop" class="nav-link">FyreShop</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/fyrenet" class="nav-link" routerLinkActive="active">FyreNet</a>
+          </li>
+          <li class="nav-item ml-lg-auto">
+            <a class="nav-link loginBtn" href="https://account.fyremc.hu/">Bejelentkezés</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link registerBtn" href="https://account.fyremc.hu/regisztracio">Regisztráció</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

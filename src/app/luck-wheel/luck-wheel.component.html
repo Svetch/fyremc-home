@@ -1,0 +1,35 @@
+<div class="luckwheel {{isDone?'done':''}}">
+<div class="spinner {{loaded?'loaded':''}}">
+    <div class="header">
+      <h1 class="title">Pörgetés</h1>
+    </div>
+    <div class="body {{isDone?'done':''}}">
+      <div class="spin" #spin>
+        <span *ngFor="let item of luckItems; index as i" class="spin-element"
+          style="transform: rotate({{360*(i/luckItems.length)}}deg);width:{{100/luckItems.length}}vw;">
+          <img src="{{item.icon}}">
+        </span>
+        <span class="center"></span>
+      </div>
+      <div class="win">
+        <img src="{{prize.icon}}" alt="" class="prize">
+      </div>
+    </div>
+    <div class="footer">
+      <button class="btn btn-success" (click)="Spin()">
+        <h3>Pörgetés</h3>
+      </button>
+    </div>
+  </div>
+  <div class="register">
+    <div class="header">
+      <h1 class="title">Regisztrálj, hogy beváltsd!</h1>
+    </div>
+    <div class="body"></div>
+    <div class="footer">
+      <button class="btn btn-danger" (click)="Spin()">
+        <h3>Regisztrálok</h3>
+      </button>
+    </div>
+  </div>
+</div>

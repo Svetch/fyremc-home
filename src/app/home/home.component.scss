@@ -1,0 +1,361 @@
+.bg-video {
+  overflow: hidden;
+  height: 100vh;
+  max-height: calc(100vw * 0.5625);
+  transition: all .4s;
+  position: relative;
+
+  youtube-player{
+    width: 100%;
+    height: calc(100vw * 0.5625);
+    //height: calc(100vw * 0.5625);
+    //filter: blur(10px);
+    pointer-events: none;
+    margin-top: min(calc(-1 * calc(100vw * 0.5625 - 100vh)/2), 0px);
+    opacity: 0;
+  }
+
+  img {
+    display: block !important;
+    width: 100%;
+    height: calc(100vw * 0.5625);
+    //height: calc(100vw * 0.5625);
+    filter: blur(10px);
+    pointer-events: none;
+    margin-top: min(calc(-1 * calc(100vw * 0.5625 - 100vh)/2), 0px);
+  }
+}
+
+.daily {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  .num {
+    margin-left: 10px;
+    background-color: #AC2828;
+    padding: 5px 30px;
+    border-radius: 8px;
+  }
+}
+
+.landing-desc {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  text-shadow: 0px 0px 20px #5F0B0B;
+  text-align: left;
+
+  text-transform: uppercase;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 6vw;
+  line-height: 5.5vw;
+  color: white;
+
+  .red-text {
+    color: red;
+  }
+}
+
+.description {
+  text-shadow: 0px 0px 20px #5F0B0B;
+  text-align: left;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color: white;
+  margin-top: 70px;
+  font-size: 3vw;
+
+  .download {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #AC2828;
+    border-radius: 8px;
+  }
+}
+
+@media(max-width: 1100px) {
+  .title {
+    font-size: 6vw;
+    line-height: 4vw;
+  }
+
+  .description {
+    font-size: 3vw;
+  }
+}
+
+@media(max-width: 992px) {
+  youtube-player {
+    display: none;
+  }
+
+  .daily {
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+
+    .num {
+      padding: 5px 10px;
+    }
+  }
+
+  .title {
+    font-size: 7vw;
+    line-height: 5vw;
+  }
+
+  .description {
+    font-size: 3.5vw;
+  }
+}
+
+@media(max-width: 552px) {
+  .landing-desc {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 992px) {
+  .wrapper {
+    margin-top: 90px;
+  }
+
+  .dialog {
+    &.step-2 {
+      .skin {
+        right: 0;
+        margin-left: 0 !important;
+      }
+
+      .skin-2 {
+        display: none !important;
+      }
+    }
+
+    img {
+      width: 90vw !important;
+      transform: translate(0, -50%) !important;
+
+      &.skin {
+        right: 0;
+      }
+
+      &.skin-2 {
+        display: none;
+      }
+    }
+
+    .dialog-box {
+      left: 5% !important;
+      top: 50% !important;
+      transform: translate(0, -50%) !important;
+      width: 70vw !important;
+
+      .dialog-content {
+        max-width: 70vw !important;
+        min-width: 70vw !important;
+      }
+    }
+  }
+}
+
+.dialog {
+  height: 100vh;
+  max-height: 1080px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+
+  &.step-2 {
+    .skin {
+      margin-left: 150vw;
+    }
+
+    .skin-2 {
+      margin-left: 0;
+    }
+
+    .dialog-box {
+      transform: translate(calc(-50% + 10vw), -50%);
+
+      .dialog-content {
+        margin-left: -100%;
+        opacity: 0;
+
+        &.step-2 {
+          opacity: 1;
+          margin: 0;
+        }
+
+      }
+    }
+  }
+
+  .skin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% + 18vw), -50%) rotate(5deg);
+    width: 30vw;
+    max-width: 50vh;
+    transition: all 1s ease-in-out;
+  }
+
+  .skin-2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% - 18vw), -50%) rotate(-5deg) scaleX(-1);
+    width: 30vw;
+    max-width: 50vh;
+    margin-left: -150vw;
+    transition: all 1s ease-in-out;
+    filter: brightness(1.5);
+  }
+
+  .dialog-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% - 10vw), -50%);
+    width: 40vw;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    display: flex;
+
+    .dialog-content {
+      width: 40vw;
+      transition: all 1s ease-in-out;
+      background-color: #1F202C;
+      border-radius: 1vw;
+      max-width: 40vw;
+      min-width: 40vw;
+      display: flex;
+      flex-direction: column;
+
+      &.step-2 {
+        opacity: 0;
+      }
+
+      .dialog-title {
+        padding: 1.5vw;
+        font-size: min(7vh, 7vw);
+      }
+
+      .dialog-description {
+        padding: 1.5vw;
+        padding-top: 0;
+        font-size: min(3vh, 3vw);
+        flex-grow: 1;
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}
+
+.social-bg {
+  background-color: white;
+}
+
+.socials-title {
+  color: #AC2828;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 20px;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    font-size: 3rem;
+  }
+
+  fa-icon {
+    font-size: 4rem;
+    margin-right: 1rem;
+  }
+
+  text-align: center;
+}
+
+.socials {
+  .col {
+    align-items: center;
+    display: flex;
+  }
+
+  div {
+    .dc {
+      margin-top: 15px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bright {
+  filter: brightness(2);
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+.steps{
+  color: white;
+  & .container{
+    padding: 90px;
+    padding-top: 130px;
+  }
+}
+.fyre-step{
+  width: 16rem;
+  height: 16rem;
+  border: 4px solid red;
+  border-radius: 50%;
+}

@@ -1,0 +1,25 @@
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #232323;
+  color: white;
+  box-shadow: 0 -10 24px 5px black;
+  //position: absolute;
+  .body {
+    padding: 15px;
+  }
+
+  .row-img {
+    width: 100%;
+  }
+}
+
+.copyright {
+  color: white;
+  background-color: #1A1A1A;
+  padding: 10px;
+  text-align: right;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}

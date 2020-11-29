@@ -1,0 +1,64 @@
+header {
+  background-color: #27293D;
+  padding: 0;
+  margin: 0;
+  height: 90px;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 5px 10px #14162b;;
+
+  @media(max-width: 992px) {
+    #navbarSupportedContent {
+      background: #27293D;
+      border: solid 2px #14162b;
+      border-radius: 8px;
+    }
+  }
+
+  .nav-link {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 25px;
+    transition: all .4s;
+    border: solid 3px rgba(0, 0, 0, 0);
+    text-align: center;
+
+    &.active {
+      color: #FF2323;
+      //text-decoration: underline;
+    }
+
+    &:hover {
+      border-bottom: solid 3px #FF2323;
+      //border: solid 3px #FF2323;
+      //border-radius: 4px;
+    }
+
+    &.registerBtn {
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #AC2828;
+      transition: all .4s;
+
+      &:hover {
+        color: red;
+        background-color: white;
+      }
+    }
+
+    &.loginBtn {
+      border: none;
+      padding: 10px;
+      transition: all .4s;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
